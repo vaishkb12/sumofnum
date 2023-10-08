@@ -1,0 +1,25 @@
+echo "Enter Size(N)"
+read N
+
+i=1
+sum=0
+
+echo "Enter Numbers"
+while [ $i -le $N ]
+do
+  read num           #get number
+  sum=$((sum + num)) #sum+=num
+  i=$((i + 1))
+done
+
+echo $sum
+echo -n "Result:"
+if [`exp $sum % 2` ==0]
+then 
+    echo "$sum is even"
+else 
+    echo "$sum is odd"
+fi
+
+
+# sumofnum
